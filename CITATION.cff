@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please attribute this research software when using it."
+title: "CO2 Capillary Trapping in Berea Sandstone"
+type: software
+authors:
+  - family-names: Ali
+    given-names: Mahmoud
+abstract: "Quasi-static PNflow workflows for interfacial controls and network-extraction sensitivity of residual CO2 trapping."
+keywords:
+  - carbon dioxide storage
+  - pore-network modelling
+  - residual trapping
+  - wettability
