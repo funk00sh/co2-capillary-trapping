@@ -2,6 +2,8 @@
 
 Selected Python workflows from a quasi-static Berea sandstone pore-network study using Imperial College PNflow. The code investigates how wettability, interfacial tension and pore geometry affect residual CO2 trapping.
 
+![Initial versus residual CO2 saturation for networks A and B](assets/trapping-curves-network-a-b.png)
+
 ## Repository structure
 
 ```text
@@ -13,7 +15,7 @@ scripts/
   parse_filling_events.py  Imbibition event-count extraction
 ```
 
-This repository contains selected code only. Networks, solver binaries, raw outputs, result tables, figures and historical drafts are not included in the current version.
+This repository contains selected code only. Networks, solver binaries, raw outputs, result tables and historical drafts are not included in the current version.
 
 ## Setup
 
