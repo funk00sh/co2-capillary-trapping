@@ -2,7 +2,7 @@
 
 Unmodified upstream PNflow. Drainage stops at a prescribed maximum capillary
 pressure (Sgi is an output); water re-invasion then runs to Pc = -200 kPa.
-Usage: python run_matrix.py <work_dir>
+Usage: python scripts/run_matrix.py <work_dir>
 """
 import os
 import csv
@@ -19,9 +19,9 @@ from typing import Dict, List, Optional
 logger = logging.getLogger(__name__)
 
 HERE = Path(__file__).resolve().parent
-SIM = HERE.parents[1]
+ROOT = HERE.parent
 EXE = Path(os.environ.get("PNFLOW_EXE", "pnflow.exe" if os.name == "nt" else "pnflow"))
-NET = HERE / "network_pnextract"
+NET = Path(os.environ.get("PNFLOW_NETWORK_A", ROOT / "data/network_A")).resolve()
 
 # 50 C, 10 MPa reference properties (retained CoolProp fluid card)
 WATER = "0.00054853798402524831 1.2 992.30800190305467"
