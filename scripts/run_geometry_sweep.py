@@ -3,7 +3,7 @@
 Knobs (one at a time): coord (random throat deletion), radius (throat radius scale), shape (throat shape-factor scale).
 Per network variant: (1) calibrate the primary-drainage Pc that gives Sgi = TARGET, (2) run the four angle ranges x 3 seeds
 at that Pc. Resumable: finished runs are appended to results.jsonl.
-Usage: python run_geometry_sweep.py <work_dir>
+Usage: python scripts/run_geometry_sweep.py <work_dir>
 """
 import json
 import shutil
@@ -19,7 +19,7 @@ import run_matrix as rm
 from make_variant_network import build
 from parse_filling_events import parse
 
-SRC = {"A": rm.HERE / "network_pnextract", "B": rm.HERE / "network_B"}
+SRC = {"A": rm.NET, "B": Path(rm.os.environ.get("PNFLOW_NETWORK_B", rm.ROOT / "data/network_B")).resolve()}
 KNOBS: Dict[str, List[float]] = {"coord": [0.1, 0.2, 0.3, 0.4], "radius": [0.7, 0.85, 1.2, 1.4], "shape": [0.5, 0.75, 1.5, 2.0]}
 SEEDS = [11, 37, 50]
 # second round: push the knobs towards where the first round suggested a crossing

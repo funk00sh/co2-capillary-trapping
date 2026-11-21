@@ -3,5 +3,7 @@ __pycache__/
 .venv/
 .env
 work/
+data/
+*.exe
 .DS_Store
 Thumbs.db

@@ -3,7 +3,7 @@
 Changes (on A): throat radius x f, throat G x g, throat volume share -> s (porosity conserved), and internal throat length
 scaled so the absolute permeability stays at K_TARGET (B's value). The fill sequence depends only on radii, G, topology and
 angles; throat length and volumes only affect conductance and saturation weights.
-Usage: python run_combo_test.py <work_dir>
+Usage: python scripts/run_combo_test.py <work_dir>
 """
 import json
 import re
